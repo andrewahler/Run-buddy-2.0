@@ -13,6 +13,13 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-position: 80%;
   }
   header h1 {
     font-weight: bold;
@@ -81,6 +88,8 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    background-attachment: fixed;
+background-position: 80%;
   }
   /* Hero Style End */
   .hero-form {
@@ -359,6 +368,26 @@ text-align: center;
 padding: 15px 0;
 font-size: 16px;
   }
+  header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+  }
+  
+  .hero-form button:hover {
+    background-color: #39a6b2;  
+  }
+  
+  .contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
+  }
+
+
+
+
+
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
   header {
@@ -462,8 +491,35 @@ font-size: 16px;
     order: 3;
 }
 }
+.service-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(4, minmax(25px, auto));
+}
+.service-grid-item {
+  width: 200px;
+  height: 50px;
+  background-color: orange;
+  border: solid;
+  color: black;
+}
 
+/* update existing rule with this declaration */
+.form-input {
+  background-color: rgba(255,255,255, 0.75);
+}
 
+/* create a new rule for focus state */
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+}
+.step:nth-child(even) {
+  border-bottom: 1px solid #39a6b2;
+}
+.step:not(:last-child) {
+  border-bottom: 1px solid #39a6b2;
+}
 
 
 
